@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcClientApp";
+
+package translate; 
+
+message Request{ 
+    string word = 1; 
+} 
+
+message Response{ 
+    string word = 1; 
+    string translation = 2; 
+} 
+
+service Translator { 
+  // definition of the Translate method,  
+  // which receives a Request message 
+  // and sends a Response message 
+  rpc Translate (Request) returns (Response); 
+}

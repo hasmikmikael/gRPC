@@ -4,6 +4,7 @@
     <Project Path="GreeterServiceApp/GreeterServiceApp.csproj" />
   </Folder>
   <Folder Name="/GrpcApp/">
+    <Project Path="GrpcClientApp/GrpcClientApp.csproj" />
     <Project Path="GrpcServiceApp/GrpcServiceApp.csproj" />
   </Folder>
 </Solution>

@@ -1,4 +1,9 @@
 <Solution>
-  <Project Path="GreeterClientApp/GreeterClientApp.csproj" />
-  <Project Path="GreeterServiceApp/GreeterServiceApp.csproj" />
+  <Folder Name="/GreeterApp/">
+    <Project Path="GreeterClientApp/GreeterClientApp.csproj" />
+    <Project Path="GreeterServiceApp/GreeterServiceApp.csproj" />
+  </Folder>
+  <Folder Name="/GrpcApp/">
+    <Project Path="GrpcServiceApp/GrpcServiceApp.csproj" />
+  </Folder>
 </Solution>

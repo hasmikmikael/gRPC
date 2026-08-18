@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="GreeterClientApp/GreeterClientApp.csproj" />
   <Project Path="GreeterServiceApp/GreeterServiceApp.csproj" />
 </Solution>

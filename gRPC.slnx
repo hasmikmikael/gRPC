@@ -11,6 +11,9 @@
     <Project Path="DateTimeClientApp/DateTimeClientApp.csproj" />
     <Project Path="DateTimeServiceApp/DateTimeServiceApp.csproj" />
   </Folder>
+  <Folder Name="/GettingHeadersApp/">
+    <Project Path="Messenger4ServiceApp/Messenger4ServiceApp.csproj" />
+  </Folder>
   <Folder Name="/GreeterApp/">
     <Project Path="GreeterClientApp/GreeterClientApp.csproj" />
     <Project Path="GreeterServiceApp/GreeterServiceApp.csproj" />

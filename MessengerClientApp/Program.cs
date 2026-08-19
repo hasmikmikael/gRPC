@@ -1,4 +1,5 @@
-﻿using Grpc.Net.Client;
+﻿using Grpc.Core;
+using Grpc.Net.Client;
 using MessengerClientApp;
 
 // creating a channel for exchanging messages with the server 
@@ -14,9 +15,15 @@ var serverData = client.ServerDataStream(new Request());
 // getting the server stream 
 var responseStream = serverData.ResponseStream;
 
-// extracting each message from the stream using iterators 
-while (await responseStream.MoveNext(new CancellationToken()))
+//// extracting each message from the stream using iterators 
+//while (await responseStream.MoveNext(new CancellationToken()))
+//{
+//    Response response = responseStream.Current;
+//    Console.WriteLine(response.Content);
+//}
+
+// to simplify data retrieval on the client side, the ReadAllAsync() method can be used
+await foreach (var response in responseStream.ReadAllAsync())
 {
-    Response response = responseStream.Current;
     Console.WriteLine(response.Content);
 }

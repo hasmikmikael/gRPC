@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/ClientStreamingApp/">
+    <Project Path="Messenger2ClientApp/Messenger2ClientApp.csproj" />
     <Project Path="Messenger2ServiceApp/Messenger2ServiceApp.csproj" />
   </Folder>
   <Folder Name="/DateTimeApp/">

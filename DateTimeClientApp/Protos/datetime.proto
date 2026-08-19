@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "DateTimeClientApp";
+
+package datetime;
+
+// import the necessary packages 
+import "google/protobuf/duration.proto";  
+import "google/protobuf/timestamp.proto"; 
+
+message Request{ 
+    string name = 1; 
+} 
+
+message Response{ 
+    string invitation = 1; 
+    google.protobuf.Timestamp start = 2; 
+    google.protobuf.Duration duration = 3; 
+} 
+
+service Inviter{ 
+  rpc Invite (Request) returns (Response); 
+}

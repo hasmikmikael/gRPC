@@ -13,7 +13,7 @@ namespace GrpcServiceApp.Services
             Console.WriteLine($" Requested word: {word}");
 
             // looking it up in the dictionary  
-            // and storeing the result in the translation variable 
+            // and storing the result in the translation variable 
             if (!words.TryGetValue(word, out var translation))
             {
                 // if the word is not found 

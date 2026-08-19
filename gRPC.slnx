@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/BidirectionalStreamingApp/">
+    <Project Path="Messenger3ServiceApp/Messenger3ServiceApp.csproj" />
+  </Folder>
   <Folder Name="/ClientStreamingApp/">
     <Project Path="Messenger2ClientApp/Messenger2ClientApp.csproj" />
     <Project Path="Messenger2ServiceApp/Messenger2ServiceApp.csproj" />

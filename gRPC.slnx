@@ -24,6 +24,7 @@
     <Project Path="GrpcServiceApp/GrpcServiceApp.csproj" />
   </Folder>
   <Folder Name="/SendingHeadersApp/">
+    <Project Path="Messenger5ClientApp/Messenger5ClientApp.csproj" />
     <Project Path="Messenger5ServiceApp/Messenger5ServiceApp.csproj" />
   </Folder>
   <Folder Name="/ServerStreamingApp/">

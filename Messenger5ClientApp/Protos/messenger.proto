@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "Messenger5ServiceApp";
+
+package messenger;
+
+message Request{} 
+
+message Response{  
+    string content = 1; 
+} 
+
+service Messenger{ 
+  rpc SendMessage (Request) returns (Response); 
+}

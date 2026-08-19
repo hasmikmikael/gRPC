@@ -11,4 +11,7 @@
     <Project Path="GrpcClientApp/GrpcClientApp.csproj" />
     <Project Path="GrpcServiceApp/GrpcServiceApp.csproj" />
   </Folder>
+  <Folder Name="/ServerStreamingApp/">
+    <Project Path="MessengerServiceApp/MessengerServiceApp.csproj" />
+  </Folder>
 </Solution>

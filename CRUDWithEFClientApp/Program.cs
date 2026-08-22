@@ -1,4 +1,5 @@
 ﻿using Crud;
+using Grpc.Core;
 using Grpc.Net.Client;
 
 // creating a channel for exchanging messages with the server 
@@ -16,3 +17,18 @@ foreach (var user in users.Users)
 {
     Console.WriteLine($"{user.Id}. {user.Name} - {user.Age}");
 }
+Console.WriteLine("");
+
+
+try
+{
+    // getting one object by id = 2 
+    UserReply user = await client.GetUserAsync(new GetUserRequest
+        { Id = 2 });
+    Console.WriteLine($"{user.Id}. {user.Name} - {user.Age}");
+}
+catch (RpcException ex)
+{
+    Console.WriteLine(ex.Status.Detail); // getting the response status 
+}
+Console.WriteLine("");

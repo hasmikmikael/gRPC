@@ -7,6 +7,9 @@
     <Project Path="Messenger2ClientApp/Messenger2ClientApp.csproj" />
     <Project Path="Messenger2ServiceApp/Messenger2ServiceApp.csproj" />
   </Folder>
+  <Folder Name="/CRUDApp/">
+    <Project Path="CRUDServiceApp/CRUDServiceApp.csproj" Id="e878df2d-3fad-4de3-9e14-b9964914bf58" />
+  </Folder>
   <Folder Name="/DateTimeApp/">
     <Project Path="DateTimeClientApp/DateTimeClientApp.csproj" />
     <Project Path="DateTimeServiceApp/DateTimeServiceApp.csproj" />

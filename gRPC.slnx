@@ -12,6 +12,7 @@
     <Project Path="CRUDServiceApp/CRUDServiceApp.csproj" Id="e878df2d-3fad-4de3-9e14-b9964914bf58" />
   </Folder>
   <Folder Name="/CRUDWithEFApp/">
+    <Project Path="CRUDWithEFClientApp/CRUDWithEFClientApp.csproj" Id="346132f0-2234-4a1e-b8b0-0faf12eeac9d" />
     <Project Path="CRUDWithEFServiceApp/CRUDWithEFServiceApp.csproj" Id="2b59a274-fca8-49cc-ab89-ec8a32f895bc" />
   </Folder>
   <Folder Name="/DateTimeApp/">

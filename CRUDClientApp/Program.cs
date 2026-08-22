@@ -42,3 +42,18 @@ UserReply userR = await client.CreateUserAsync(new CreateUserRequest
     { Name = "Sam", Age = 28 });
 Console.WriteLine($"{userR.Id}. {userR.Name} - {userR.Age}");
 Console.WriteLine("");
+
+
+try
+{
+    // updating a single object – let's change the name of the object  
+    // with id=1 to Tomas 
+    UserReply user = await client.UpdateUserAsync(new 
+        UpdateUserRequest { Id = 1, Name = "Tomas", Age = 38 });
+    Console.WriteLine($"{user.Id}. {user.Name} - {user.Age}");
+}
+catch (RpcException ex)
+{
+    Console.WriteLine(ex.Status.Detail);
+}
+Console.WriteLine("");

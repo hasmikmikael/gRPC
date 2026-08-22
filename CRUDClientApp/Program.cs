@@ -22,3 +22,16 @@ Console.WriteLine("");
 UserReply use = await client.GetUserAsync(new GetUserRequest { Id = 1 });
 Console.WriteLine($"{use.Id}. {use.Name} - {use.Age}");
 Console.WriteLine("");
+
+
+try
+{
+    // retrieving a single object with id = 4 
+    UserReply user = await client.GetUserAsync(new GetUserRequest { Id = 4 });
+    Console.WriteLine($"{user.Id}. {user.Name} - {user.Age}");
+}
+catch (RpcException ex)
+{
+    Console.WriteLine(ex.Status.Detail);  // getting the response status 
+}
+Console.WriteLine("");

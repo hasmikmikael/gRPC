@@ -32,3 +32,10 @@ catch (RpcException ex)
     Console.WriteLine(ex.Status.Detail); // getting the response status 
 }
 Console.WriteLine("");
+
+
+// adding a single object 
+UserReply userR = await client.CreateUserAsync(new CreateUserRequest
+    { Name = "Alice", Age = 32 });
+Console.WriteLine($"{userR.Id}. {userR.Name} - {userR.Age}");
+Console.WriteLine("");

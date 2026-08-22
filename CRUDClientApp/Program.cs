@@ -19,19 +19,26 @@ foreach (var user in users.Users)
 Console.WriteLine("");
 
 // retrieving a single object by id = 1 
-UserReply use = await client.GetUserAsync(new GetUserRequest { Id = 1 });
-Console.WriteLine($"{use.Id}. {use.Name} - {use.Age}");
+UserReply userRep = await client.GetUserAsync(new GetUserRequest { Id = 1 });
+Console.WriteLine($"{userRep.Id}. {userRep.Name} - {userRep.Age}");
 Console.WriteLine("");
 
 
 try
 {
     // retrieving a single object with id = 4 
-    UserReply user = await client.GetUserAsync(new GetUserRequest { Id = 4 });
-    Console.WriteLine($"{user.Id}. {user.Name} - {user.Age}");
+    UserReply userRe = await client.GetUserAsync(new GetUserRequest { Id = 4 });
+    Console.WriteLine($"{userRe.Id}. {userRe.Name} - {userRe.Age}");
 }
 catch (RpcException ex)
 {
     Console.WriteLine(ex.Status.Detail);  // getting the response status 
 }
+Console.WriteLine("");
+
+
+// adding a single object 
+UserReply userR = await client.CreateUserAsync(new CreateUserRequest
+    { Name = "Sam", Age = 28 });
+Console.WriteLine($"{userR.Id}. {userR.Name} - {userR.Age}");
 Console.WriteLine("");

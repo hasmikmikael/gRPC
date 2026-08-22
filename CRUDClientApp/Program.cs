@@ -57,3 +57,16 @@ catch (RpcException ex)
     Console.WriteLine(ex.Status.Detail);
 }
 Console.WriteLine("");
+
+
+try
+{
+    // deleting the object with id = 2 
+    UserReply user = await client.DeleteUserAsync(new DeleteUserRequest { Id = 2 });
+    Console.WriteLine($"{user.Id}. {user.Name} - {user.Age}");
+}
+catch (RpcException ex)
+{
+    Console.WriteLine(ex.Status.Detail);
+}
+Console.WriteLine("");
